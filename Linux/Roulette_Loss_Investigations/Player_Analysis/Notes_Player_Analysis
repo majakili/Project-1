@@ -1,0 +1,19 @@
+March 10(awk '{print $1,$2}')
+05:00:00 AM
+08:00:00 AM
+02:00:00 PM
+08:00:00 PM
+11:00:00 PM
+
+Mar 12
+05:00:00 AM
+08:00:00 AM
+02:00:00 PM
+08:00:00 PM
+11:00:00 PM
+
+March 15 
+05:00:00 AM
+08:00:00 AM
+02:00:00 PM
+The player that was playing during every loss event was Mylie Schmidt. The total time was 13(wc -w 'Mylie')
