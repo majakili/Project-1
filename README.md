@@ -164,6 +164,21 @@ Which URL do you navigate to in order to check that the ELK server is running?
 http://publicip(elkserver):5601[http://40.87.102.152:5601]
 ```
 
+
+```
+ssh radmin@104.42.255.23(Jumpbox_PublicIP)
+sudo -i
+docker container list -a (Helps locoate all your containers)
+docker start (Special_Funny_Name)
+docker attach (Special_Funny_Name)
+cd /etc/ansible
+ansible-playbook install-elk.yml (Runs and Setups your Elk VM)
+cd /etc/ansible/
+ansible-playbook filebeat-playbook.yml
+
+- Check in the browser if everything is working
+http://publicip(elkserver):5601[http://40.87.102.152:5601]
+```
 ### References
 
 - Filebeat: Lightweight Log Analysis & Elasticsearch from https://www.elastic.co/beats/filebeat 
