@@ -12,7 +12,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
     - [METRICBEAT](Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -32,9 +32,9 @@ Load balancing ensures that the application will be highly reliable, in addition
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the traffic and system logs.
 
-- Filebeat, at the requests by admin, records log files and location, collects the log events and transfers it to Logstash or Elasticsearch.
+- Filebeat, at the requests by admin, records log files and location.
 
-- Metricbeat collects metrics and statistics data from the operation system from services running on your server. It collects and transfers to the output at the specified location, Ekasticsearch or Logstash.
+- Metricbeat records metrics and statistics data from the operation system from services running on your server. 
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -50,9 +50,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+
 - 104.42.255.23
 
 Machines within the network can only be accessed by the Jump Box.
+
 - The Jump Box VM has access to the ELK VM. The IP address of the Jump Box VM is 10.0.0.4 and the Elk VM IP address is 10.1.0.4.
 
 A summary of the access policies in place can be found in the table below.
@@ -69,9 +71,11 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows administrator to automate some daily tasks and allows focus on more important tasks. 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install docker.io
+- Install Python pip3
+- Install Docker Python Module
+- Increase Virtual Machine memory
+- Download and Launch the Docker ELK Container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -79,14 +83,16 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- 10.0.0.6
-- 10.0.0.7
+- [Web-1] - 10.0.0.6
+- [Web-2] - 10.0.0.7
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat collects the log events by visitors and transfers it to Logstash or Elasticsearch.
+- Metricbeat collects the CPU and memory usage and transfers to the output at the specified location, Ekasticsearch or Logstash. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
