@@ -26,7 +26,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly reliable, in addition to restricting access to the network.
 
-- The load balancers are used to protect from denial-of-service (DDos) attacks. The load balancer distributes traffic among the servers which also protects the availability aspect of security.
+- The load balancers are used to protect from denial-of-service (DDos) attacks. The load balancer distributes traffic among the servers which also protects the availability aspect of security. -->
 
 - The main advantage of jump box is to keep the virtual machines from public vulnerabilities
 
@@ -87,8 +87,8 @@ This ELK server is configured to monitor the following machines:
 - [Web-2] - 10.0.0.7
 
 We have installed the following Beats on these machines:
-- Filebeat
-- Metricbeat
+- Filebeat [filebeat-7.6.1-amd64.deb]
+- Metricbeat []
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat collects the log events by visitors and transfers it to Logstash or Elasticsearch.
@@ -98,9 +98,13 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat-config.yml file to /etc/ansible/files.
+- Update the filebeat-config.yml file:
+
+  - hosts: ["10.1.0.4:9200"]
+  - username: "elastic"
+  - password: "changeme" 
+- Run the playbook, and navigate to Kibana through Elk VM public IP to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_

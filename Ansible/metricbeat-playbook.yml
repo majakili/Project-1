@@ -10,7 +10,7 @@
 
     # Use command module
   - name: install metricbeat
-    command: dpkg -i metricbeat-7.4.0-amd64.deb
+    command: dpkg -i metricbeat-7.10.1-amd64.deb
 
     # Use copy module
   - name: drop in metricbeat config
