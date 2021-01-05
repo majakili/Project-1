@@ -148,7 +148,7 @@ How do I specify which machine to install the ELK server on versus which to inst
 etc/ansible.cfg
 
 remote user=ansible
-**********************************************
+*******************************************************************************
 
 /etc/ansible/hosts
 [webservers]
