@@ -122,7 +122,7 @@ setup.kibana:
 In the case of succeful installation of `filebeat` you should be able to see the following.
 ![screenshot of Kibana Status](Images/Kibana_Filebeat.png)
 
- Also repeat the steps about for Installing Metricbeat starting with [metricbeat-config.yml](Ansible/metricbeat-config.yml)
+Also repeat the steps about for Installing Metricbeat starting with [metricbeat-config.yml](Ansible/metricbeat-config.yml)
 
 Which file is the playbook? The playbook files are:
 
