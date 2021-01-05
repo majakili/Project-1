@@ -140,8 +140,8 @@ Where do you copy it?
 
 Which file do you update to make Ansible run the playbook on a specific machine?
 
-[/etc.ansible.cfg](Ansible/ansible.cfg)
-[/etc/ansible/hosts](Ansible/hosts)
+- [/etc.ansible.cfg](Ansible/ansible.cfg)
+- [/etc/ansible/hosts](Ansible/hosts)
 
 How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 ```
