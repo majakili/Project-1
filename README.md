@@ -26,9 +26,9 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly reliable, in addition to restricting access to the network.
 
-- The load balancers are used to protect from denial-of-service (DDos) attacks. The load balancer distributes traffic among the servers which also protects the availability aspect of security. -->
+- The load balancers are used to protect from denial-of-service (DDos) attacks. It distributes traffic among the servers which also protects the availability aspect of security.
 
-- The main advantage of jump box is to keep the virtual machines from public vulnerabilities
+- The main advantage of Jump Box is to keep the virtual machines from public vulnerabilities.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the traffic and system logs.
 
@@ -43,7 +43,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.4   | Linux            |
 | Web-1    | Server   | 10.0.0.6   | Linux            |
-| Web-2    | Server   | 10.0.0.7   | Linux            |  
+| Web-2    | Server   | 10.0.0.7   | Linux            |
 | Elk      | Log/Monitor| 10.1.0.4 | Linux            |
 
 ### Access Policies
